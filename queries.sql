@@ -25,3 +25,7 @@ DROP table job
 SET foreign_key_checks = 1;
 
 ## Part 4: Test it with SQL
+
+SELECT s.name,s.description FROM techjobs.skill s
+JOIN techjobs.job_skills js ON s.id = js.skills_id
+JOIN techjobs.job j ON j.id = js.jobs_id
